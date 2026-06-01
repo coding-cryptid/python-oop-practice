@@ -23,10 +23,6 @@ class Student:
         print(f"Grades: {self.grades}")
         print(f"Average Grade: {self.average_grade()}")
     
-    # Unique grades for all students
-    def unique_grades(self, student1, student2, student3):
-        unique = {(set(student1.grades)).symmetric_difference(set(student2.grades)).symmetric_difference(set(student3.grades))}
-        print(unique)
 
 # Created student objects with their name, email, and list of initial grades
 student1 = Student('John', 'jbschoolname@gmail.com', [85, 90, 78])
@@ -53,3 +49,8 @@ student_dict = {
 # Retrieve a student by their email
 def get_student_by_email(email):
     return student_dict.get(email)
+
+# Unique grades for all students
+def unique_grades(self, student1, student2, student3):
+    unique = {(set(student1.grades)).symmetric_difference(set(student2.grades)).symmetric_difference(set(student3.grades))}
+    print(unique)
