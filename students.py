@@ -18,10 +18,13 @@ class Student:
 
     # Display information about the student.
     def display_info(self):
+        print("-----------------------------")
+        print("Student Information:")
         print(f"Name: {self.name}")
         print(f"Email: {self.email}")
         print(f"Grades: {self.grades}")
         print(f"Average Grade: {self.average_grade()}")
+        print("                             ")
 
     # Return grades as a tuple and demonstrate immutability using try-except block.
     def grades_tuple(self):
@@ -72,5 +75,7 @@ student3.grades.pop()
 
 # Prints first and last grade for each student and the total number of grades. 
 for student in [student1, student2, student3]:
+    print("-----------------------------")
+    print(f"{student.name}'s First and Last Grades:")
     print(student.grades[0], student.grades[-1])
-    print(len(student.grades))
+    print(f"Total number of grades: {len(student.grades)}")
