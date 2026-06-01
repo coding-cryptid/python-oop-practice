@@ -25,6 +25,16 @@ class Student:
         print(f"Email: {self.email}")
         print(f"Grades: {self.grades}")
         print(f"Average Grade: {self.average_grade()}")
+
+    # Return grades as a tuple and demonstrate immutability using try-except block
+    def grades_tuple(self):
+        return tuple(self.grades)
+    try:
+        grades_tuple = grades_tuple()
+        grades_tuple[0] = 100
+    except TypeError as e:
+        print(f"Error: {e} - Tuples are immutable, cannot modify grades.")
+    
     
 
 # Created student objects with their name, email, and list of initial grades
