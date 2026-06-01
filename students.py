@@ -1,6 +1,6 @@
 # Defined the Student class.
 class Student:
-    def __init__ (self, name, email, grades):
+    def __init__(self, name, email, grades):
         self.name = name
         self.email = email
         self.grades = grades
@@ -27,13 +27,12 @@ class Student:
         print("                             ")
 
     # Return grades as a tuple and demonstrate immutability using try-except block.
-    def grades_tuple(self):
-        return tuple(self.grades)
-    try:
-        grades_tuple = grades_tuple()
-        grades_tuple[0] = 100
-    except TypeError as e:
-        print(f"Error: {e} - Tuples are immutable, cannot modify grades.")
+    def demonstrate_immutability(self):
+        t = self.grades_tuple()
+        try:
+            t[0] = 100
+        except TypeError as e:
+            print(f"Error: {e} - Tuples are immutable, cannot modify grades.")
     
     
 
@@ -44,8 +43,11 @@ student3 = Student('Tim', 'tdscoolname@gmail.com', [90, 95, 100])
 
 # Add a new grade for each student.
 student1.add_grade(82)
+student1.add_grade(85)
 student2.add_grade(95)
+student2.add_grade(90)
 student3.add_grade(98)
+student3.add_grade(97)
 
 # Display information about each student.
 student1.display_info()
@@ -63,10 +65,12 @@ student_dict = {
 def get_student_by_email(email):
     return student_dict.get(email)
 
-# Unique grades for all students
-def unique_grades(student1, student2, student3):
-    unique = {(set(student1.grades)).symmetric_difference(set(student2.grades)).symmetric_difference(set(student3.grades))}
-    print(unique)
+# Unique grades for all students.
+
+# Demonstrated immutability of tuples.
+student1.demonstrate_immutability()
+student2.demonstrate_immutability()
+student3.demonstrate_immutability()
 
 # Removed each students last grade using pop().
 student1.grades.pop()
