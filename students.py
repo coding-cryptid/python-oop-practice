@@ -1,4 +1,7 @@
 # Define the Student class
+from enum import unique
+
+
 class Student:
     def __init__ (self, name, email, grades):
         self.name = name
@@ -51,6 +54,6 @@ def get_student_by_email(email):
     return student_dict.get(email)
 
 # Unique grades for all students
-def unique_grades(self, student1, student2, student3):
+def unique_grades(student1, student2, student3):
     unique = {(set(student1.grades)).symmetric_difference(set(student2.grades)).symmetric_difference(set(student3.grades))}
     print(unique)
