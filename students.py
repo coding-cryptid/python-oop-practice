@@ -4,7 +4,7 @@ class Student:
         self.name = name
         self.email = email
         self.grades = grades
-        
+
     # Methods for the Student class
     # Add a grade to the student's list of grades
     def add_grade(self, grade):
@@ -30,10 +30,11 @@ student3 = Student('Tim', 'tdscoolname@gmail.com', [90, 95, 100])
 
 # Add a new grade for each student
 student1.add_grade(82)
-student2.add_grade(91)
+student2.add_grade(95)
 student3.add_grade(98)
 
 # Display information about each student
 student1.display_info()
 student2.display_info()
 student3.display_info()
+
