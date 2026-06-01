@@ -38,3 +38,13 @@ student1.display_info()
 student2.display_info()
 student3.display_info()
 
+# Create a dictionary to store students by their email for easy access
+student_dict = {
+    student1.email: student1,
+    student2.email: student2,
+    student3.email: student3
+}
+
+# Retrieve a student by their email
+def get_student_by_email(email):
+    return student_dict.get(email)
