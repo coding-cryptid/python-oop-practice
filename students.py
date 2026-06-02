@@ -27,6 +27,9 @@ class Student:
         print("                             ")
 
     # Return grades as a tuple and demonstrate immutability using try-except block.
+    def grades_tuple(self):
+        return tuple(self.grades)
+    
     def demonstrate_immutability(self):
         t = self.grades_tuple()
         try:
@@ -66,6 +69,17 @@ def get_student_by_email(email):
     return student_dict.get(email)
 
 # Unique grades for all students.
+def unique_grades(student1, student2, student3):
+    all_students = [student1, student2, student3]
+    unique = set()
+    for student in all_students:
+        for grade in student.grades:
+            if all(grade not in other.grades for other in all_students if other != student):
+                unique.add(grade)
+    print(f"Grades unique to only one student: {unique}")
+    print("                             ")
+
+unique_grades(student1, student2, student3)
 
 # Demonstrated immutability of tuples.
 student1.demonstrate_immutability()
