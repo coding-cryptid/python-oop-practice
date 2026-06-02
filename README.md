@@ -6,3 +6,4 @@ This assignment was built utilizing concepts such as OOP, classes, methods, tupl
 To use, just open the code in your editor and run in the terminal.
 
 ## Tech Stack:
+![Python](https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54)
